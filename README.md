@@ -103,3 +103,6 @@ A repo in the cloud. `origin` points to the remote repo
 
 `rm -r folder` // for xcne
 
+### Unzip all .zip files in a folder and put them into separate folders
+`find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;`
+
