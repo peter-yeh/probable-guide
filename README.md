@@ -60,7 +60,10 @@ A repo in the cloud. `origin` points to the remote repo
 `git merge --abort`
 
 ### Git editing history
-#### Un commit commits in git history
+#### un-commit but don't un-stage
+`git reset --soft HEAD^`
+
+#### un-commit and un-stage
 `git reset HEAD^`
 
 ##### Discard all non committed files
