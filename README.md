@@ -1,5 +1,5 @@
 # probable-guide
-My CLI CheatSheet
+My CLI CheatSheet for git
 
 ## Git
 
@@ -12,7 +12,7 @@ A repo in the cloud. `origin` points to the remote repo
 
 ### Basic git commands
 #### Download repo
-`git clone https://github.com/peter-yeh/ComputerOS.git`
+`git clone https://github.com/peter-yeh/reponame.git`
 
 #### Get change from github
 `git pull`
@@ -36,6 +36,14 @@ A repo in the cloud. `origin` points to the remote repo
 `git push`
 
 
+### Staging/commiting
+##### Discard all non committed files
+`git clean -df`
+
+#### Remove non staged files
+`git restore .`
+
+
 ### Stash
 #### Create a stash with the name
 `git stash save "stash message"`
@@ -52,12 +60,14 @@ A repo in the cloud. `origin` points to the remote repo
 #### Reapply the stash
 `git stash pop`
 
+
 ### Git merging files
 #### Merge feature branch into current branch
 `git merge feature` // call in master branch
 
 ##### Abort merge conflict
 `git merge --abort`
+
 
 ### Git editing history
 #### un-commit but don't un-stage
@@ -66,43 +76,8 @@ A repo in the cloud. `origin` points to the remote repo
 #### un-commit and un-stage
 `git reset HEAD^`
 
-##### Discard all non committed files
-`git clean -df`
-
-#### Remove non staged files
-`git restore .`
-
 #### Update the git repo in origin after changing the commit tree
 `git push origin +HEAD`
 
-## SSH
-### Move **files** from local storage to remote location, e.g. sunfire
-`scp lab1.tar.gz yuchun@sunfire.comp.nus.edu.sg:lab1.tar.gz`
-
-### Move **folder** from sunfire to xcne5, -r
-`scp -r lab1.tar.gz yuchun@xcne5:lab1.tar.gz`
-
-
-## Useful Unix commands
-### Compile c code into exe format
-`gcc ex1.c -o ex1.exe`
-
-### Pass text in test1.in into ex1.exe
-`./ex1.exe < test1.in`
-
-`./ex1.exe < test1.in > myOut1.txt`
-
-### Comparing files
-`diff test1.out myOut1.txt`
-
-### Unzip the zip files
-`gunzip -c lab1.tar.gz | tar xvf -`
-
-### Remove whole folder (-r recusrive)
-`yes | rm -r folder` // for sunfire since it keeps asking confirmation
-
-`rm -r folder` // for xcne
-
-### Unzip all .zip files in a folder and put them into separate folders
-`find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;`
-
+#### Force push local history after changing commit tree
+`git push -f origin branchName`
