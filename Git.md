@@ -78,7 +78,7 @@
 `git push -f origin branchName`
 
 ## Git config settings
-``` properties
+```properties
 # Store the password
 git config credential.helper store
 
