@@ -1,4 +1,15 @@
-## Useful Unix commands
+# Useful Unix commands
+
+## Ubuntu
+``` properties
+sudo apt
+
+sudo apt-get
+
+```
+
+## Others
+
 ### Compile c code into exe format
 `gcc ex1.c -o ex1.exe`
 
