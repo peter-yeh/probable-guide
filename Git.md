@@ -36,7 +36,7 @@
 `git clean -df`
 
 #### Remove non staged files
-`git restore .`
+`git restore .` or `git checkout .` for older version of git before 2.23
 
 
 ## Stash
