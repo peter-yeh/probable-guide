@@ -40,3 +40,9 @@ sudo apt-get
 
 ### Move **folder** from sunfire to xcne5, -r
 `scp -r lab1.tar.gz yuchun@xcne5:lab1.tar.gz`
+
+### Network
+``` bash
+arp -a // Display the arp table
+sudo systemctl restart NetworkManager
+```
