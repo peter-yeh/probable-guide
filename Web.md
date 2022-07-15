@@ -4,7 +4,7 @@
 ### Setup
 ###### https://www.digitalocean.com/community/tutorials/how-to-make-a-url-shortener-with-flask-and-sqlite 
 1. Create a Backend folder
-- `mkdir Backend`
+- `mkdir Backend && cd Backend`
 
 1. Create a virtual environment
 - `python -m venv env`
