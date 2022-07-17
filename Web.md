@@ -95,7 +95,7 @@ pip freeze > requirements.txt
 ###### https://auth0.com/blog/using-python-flask-and-angular-to-build-modern-apps-part-1/
 
 1. Install angular
-`npm install @angular/cli`
+`npm install -g @angular/cli`
 
 1.To create Frontend
 `ng new Frontend`
